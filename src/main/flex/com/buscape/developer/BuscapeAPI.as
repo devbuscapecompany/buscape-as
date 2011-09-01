@@ -106,7 +106,7 @@ package com.buscape.developer {
 		 * @param productId Id do produto
 		 * @param boolean lomadee Indica se deverá ser utilizada a API do Lomadee
 		 */
-		public function findOfferList( categoryId :uint = NaN , keyword :String = null , productId :uint = NaN , lomadee :Boolean = false ) :void {
+		public function findOfferList( categoryId :uint = 0 , keyword :String = null , productId :uint = 0 , lomadee :Boolean = false ) :void {
 			var args :URLVariables = new URLVariables();
 			
 			if ( !isNaN( categoryId ) ) {
