@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.buscape</groupId>
 	<artifactId>developer-core-as</artifactId>
@@ -9,11 +10,11 @@
 	<packaging>swc</packaging>
 
 	<description>ActionScript version of the Buscape-Wrapper</description>
-	
+
 	<prerequisites>
-		<maven>2.0.9</maven>
+		<maven>3.0.2</maven>
 	</prerequisites>
-	
+
 	<licenses>
 		<license>
 			<name>GNU Lesser General Public License, Version 2.1</name>
@@ -22,6 +23,7 @@
 	</licenses>
 
 	<developers>
+		<!-- TODO: add more developers -->
 		<developer>
 			<id>gutomaia</id>
 			<name>Gustavo Maia Neto</name>
@@ -31,16 +33,6 @@
 	</developers>
 
 	<distributionManagement>
-		<repository>
-			<id>repository.guto.net</id>
-			<name>gUTO.nET Repository</name>
-			<url>scpexe://repository.guto.net/home/repogutonet/repository.guto.net/maven2</url>
-		</repository>
-		<snapshotRepository>
-			<id>repository.guto.net</id>
-			<name>gUTO.nET Repository</name>
-			<url>scpexe://repository.guto.net/home/repogutonet/repository.guto.net/maven2</url>
-		</snapshotRepository>
 		<site>
 			<id>gUTOnET</id>
 			<name>GitHubSite</name>
@@ -78,10 +70,13 @@
 			<plugin>
 				<groupId>org.sonatype.flexmojos</groupId>
 				<artifactId>flexmojos-maven-plugin</artifactId>
+				<version>4.0-beta-3</version>
 				<extensions>true</extensions>
 				<configuration>
 					<testRunner>
-						<launcher><flashplayerCommand>${flashPlayer.command}</flashplayerCommand></launcher>
+						<launcher>
+							<flashplayerCommand>${flashPlayer.command}</flashplayerCommand>
+						</launcher>
 					</testRunner>
 				</configuration>
 			</plugin>
@@ -91,7 +86,7 @@
 		<dependency>
 			<groupId>com.adobe.flex.framework</groupId>
 			<artifactId>flex-framework</artifactId>
-			<version>3.2.0.3958</version>
+			<version>4.5.0.17855</version>
 			<type>pom</type>
 		</dependency>
 		<dependency>
@@ -134,11 +129,10 @@
 			<id>Javanet</id>
 			<name>Java Net Download</name>
 			<url>http://download.java.net/maven/2/</url>
-			<!--
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			-->
 		</repository>
 	</repositories>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 </project>
