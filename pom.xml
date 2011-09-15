@@ -23,7 +23,14 @@
 	</licenses>
 
 	<developers>
-		<!-- TODO: add more developers -->
+<!--
+		<developer>
+			<id>netojoaobatista</id>
+		</developer>
+		<developer>
+			<id>aleborba</id>
+		</developer>
+-->
 		<developer>
 			<id>gutomaia</id>
 			<name>Gustavo Maia Neto</name>
