@@ -6,28 +6,26 @@
 			import com.buscape.developer.BuscapeAPI;
  
 			private function init():void {
-
-				addEventListener(Event.ENTER_FRAME, enterFrameHandler);
 			}
 
-		    	private function enterFrameHandler( event : Event ) : void {
-		    	}
+			private function onFindCategoryList( event:Event ): void {
+				trace(event.target.result);
+				textArea.text = event.target.result;
+				var xml:XML = new XML(event.target.result);
+			}
 			
 			private function btn_click(): void {
-				Alert.show("um click");
 				var applicationId :String = '564771466d477a4458664d3d';
 				var buscape :BuscapeAPI = new BuscapeAPI( applicationId );
-
 				buscape.sandbox().findCategoryList();
-				buscape.addEventListener( Event.COMPLETE , function( event :Event ) :void {
-    					Alert.show( event.target.result );
-				} );
-
+				buscape.addEventListener( Event.COMPLETE , onFindCategoryList );
 			}		
 		]]>
 	</mx:Script>
 	<mx:Panel width="80%" height="80%" title="Painel de Teste" status="testo de status" >
 		<mx:VBox width="80%" height="80%">
+			<mx:TextArea width="100%" height="100%" id="textArea" />
+				
 		</mx:VBox>
 		<mx:ControlBar width="100%">
 			<mx:Label text="Aqui entra o controle" />
