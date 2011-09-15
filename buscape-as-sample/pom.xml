@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.buscape</groupId>
-	<artifactId>buscape-as-api</artifactId>
-	<name>Buscape ActionScript Developer - Api</name>
+	<artifactId>buscape-as-sample</artifactId>
+	<name>Buscape ActionScript Developer - Sample</name>
 	<version>1.0-SNAPSHOT</version>
 
-	<packaging>swc</packaging>
+	<packaging>swf</packaging>
 
 	<description>ActionScript version of the Buscape-Client-Api</description>
 
@@ -18,23 +18,6 @@
         </parent>
 
 	<build>
-		<extensions>
-			<extension>
-				<groupId>org.apache.maven.scm</groupId>
-				<artifactId>maven-scm-provider-gitexe</artifactId>
-				<version>1.3</version>
-			</extension>
-			<extension>
-				<groupId>org.apache.maven.scm</groupId>
-				<artifactId>maven-scm-manager-plexus</artifactId>
-				<version>1.3</version>
-			</extension>
-			<extension>
-				<groupId>org.kathrynhuxtable.maven.wagon</groupId>
-				<artifactId>wagon-gitsite</artifactId>
-				<version>0.3.1</version>
-			</extension>
-		</extensions>
 		<sourceDirectory>src/main/flex</sourceDirectory>
 		<testSourceDirectory>src/test/flex</testSourceDirectory>
 		<plugins>
@@ -60,6 +43,14 @@
 			<version>4.5.0.17855</version>
 			<type>pom</type>
 		</dependency>
+		<dependency>
+			<groupId>com.buscape</groupId>
+			<artifactId>buscape-as-api</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>swc</type>
+			<scope>compile</scope>
+		</dependency>
+		
 		<dependency>
 			<groupId>com.asunit</groupId>
 			<artifactId>asunit</artifactId>

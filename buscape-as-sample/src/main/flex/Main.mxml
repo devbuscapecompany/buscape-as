@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="init()">
+	<mx:Script>
+		<![CDATA[
+                        import mx.controls.Alert;
+			import com.buscape.developer.BuscapeAPI;
+ 
+			private function init():void {
+
+				addEventListener(Event.ENTER_FRAME, enterFrameHandler);
+			}
+
+		    	private function enterFrameHandler( event : Event ) : void {
+		    	}
+			
+			private function btn_click(): void {
+				Alert.show("um click");
+				var applicationId :String = '564771466d477a4458664d3d';
+				var buscape :BuscapeAPI = new BuscapeAPI( applicationId );
+
+				buscape.sandbox().findCategoryList();
+				buscape.addEventListener( Event.COMPLETE , function( event :Event ) :void {
+    					Alert.show( event.target.result );
+				} );
+
+			}		
+		]]>
+	</mx:Script>
+	<mx:Panel width="80%" height="80%" title="Painel de Teste" status="testo de status" >
+		<mx:VBox width="80%" height="80%">
+		</mx:VBox>
+		<mx:ControlBar width="100%">
+			<mx:Label text="Aqui entra o controle" />
+			<mx:Spacer width="100%" />
+			<mx:Button label="Botao" click="btn_click()" />
+		</mx:ControlBar>
+	</mx:Panel>
+
+</mx:Application>
