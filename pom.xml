@@ -56,8 +56,8 @@
 
 
 	<modules>
-		<module>buscape-wrapper</module>
-<!--		<module>buscape-sample</module> -->
+		<module>buscape-as-api</module>
+<!--		<module>buscape-as-sample</module> -->
 	</modules>
 
 	<build>
