@@ -1,4 +1,5 @@
 *.swp
+.asdt_classpath
 .classpath
 .project
 .settings/
