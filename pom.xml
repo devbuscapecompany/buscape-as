@@ -68,7 +68,7 @@
 
 
 	<modules>
-		<module>buscape-as-api</module>
+		<module>buscape-as-wrapper</module>
 		<module>buscape-as-sample</module>
 	</modules>
 

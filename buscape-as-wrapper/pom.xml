@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.buscape</groupId>
-	<artifactId>buscape-as-api</artifactId>
-	<name>Buscape ActionScript Developer - Api</name>
+	<artifactId>buscape-as-wrapper</artifactId>
+	<name>Buscape ActionScript Developer - Wrapper</name>
 	<version>1.0-SNAPSHOT</version>
 
 	<packaging>swc</packaging>
 
-	<description>ActionScript version of the Buscape-Client-Api</description>
+	<description>ActionScript version of the Buscape-Wrapper</description>
 
 	<parent>
 		<groupId>com.buscape</groupId>

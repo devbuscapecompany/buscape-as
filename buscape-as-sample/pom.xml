@@ -45,7 +45,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.buscape</groupId>
-			<artifactId>buscape-as-api</artifactId>
+			<artifactId>buscape-as-wrapper</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<type>swc</type>
 			<scope>compile</scope>
