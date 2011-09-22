@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.buscape</groupId>
+	<artifactId>buscape-as-sample</artifactId>
+	<name>Buscape ActionScript Developer - Sample</name>
+	<version>1.0-SNAPSHOT</version>
+
+	<packaging>swf</packaging>
+
+	<description>ActionScript version of the Buscape-Client-Api</description>
+
+	<parent>
+		<groupId>com.buscape</groupId>
+		<artifactId>buscape-as</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<build>
+		<sourceDirectory>src/main/flex</sourceDirectory>
+		<testSourceDirectory>src/test/flex</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<testRunner>
+						<launcher>
+							<flashplayerCommand>${flashPlayer.command}</flashplayerCommand>
+						</launcher>
+					</testRunner>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.adobe.flex.framework</groupId>
+			<artifactId>flex-framework</artifactId>
+			<version>4.5.0.17855</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.buscape</groupId>
+			<artifactId>buscape-as-wrapper</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>swc</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.asunit</groupId>
+			<artifactId>asunit</artifactId>
+			<version>20071011</version>
+			<type>swc</type>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
